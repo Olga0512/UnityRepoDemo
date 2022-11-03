@@ -19,11 +19,14 @@ public class LearningCurve : MonoBehaviour
     public bool HasSecretIncantation = false;
 
     public string RareItem = "Relic Stone";
-    string CharacterAction = "Attack";
+    
 
     // Start is called before the first frame update
     void Start()
     {
+
+        string myCharacterAction = "Attack";
+        
         Debug.Log(30 + 1);
         Debug.Log(CurrentAge + 1);
 
@@ -42,7 +45,7 @@ public class LearningCurve : MonoBehaviour
 
         Thievery();
         OpenTreasureChamber();
-        PrintCharacterAction();
+        PrintCharacterAction(myCharacterAction);
         RollDice();
 	    FindPartyMember();
 
@@ -107,7 +110,7 @@ public class LearningCurve : MonoBehaviour
         }
     }
 
-    public void PrintCharacterAction()
+    public void PrintCharacterAction(string CharacterAction)
     {
         switch(CharacterAction)
         {
